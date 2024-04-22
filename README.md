@@ -14,7 +14,7 @@ This project aims to process raw Yelp data and create a unified dataset for quer
 ## Steps
 1. **Raw to Bronze**: The raw JSON data files are read using Spark and combined into a Bronze Delta table. This step involves data reading, transformation, and joining.
 2. **Bronze to Silver**: The Bronze Delta table is cleaned and transformed into a Silver Delta table. Data cleaning involves removing unnecessary columns, filtering out invalid records, and removing duplicates.
-3. **Query for Business Questions**: Various business questions are answered by querying the Silver Delta table using Spark SQL. Examples of queries include counting businesses by state and city, identifying the most common business types, analyzing review patterns, and calculating average review stars for each business.
+3. **Query for Business Questions**: Various business questions are answered by querying the Silver Delta table using Spark DataFrame API. Examples of queries include counting businesses by state and city, identifying the most common business types, analyzing review patterns, and calculating average review stars for each business.
 
 ## Folder Structure
 - `/FileStore/tables/`: Contains raw JSON data files.
